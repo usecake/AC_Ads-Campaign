@@ -78,9 +78,31 @@
             <td class="table__cell">Price</td>
             <td class="table__cell">Start Time</td>
             <td class="table__cell">End Time</td>
-            <td class="table__cell">
-              <img src="https://raw.githubusercontent.com/WendellLiu/alphacamp-frontend-course/master/data-table/static/icons/menu.svg"
+            <td class="table__cell table__cell--action">
+              <img class="cell__action__icon" src="https://raw.githubusercontent.com/WendellLiu/alphacamp-frontend-course/master/data-table/static/icons/menu.svg"
                    alt="">
+              <div class="action__menu hidden" role="dialog" aria-modal="true">
+                <div class="menu__body">
+                  <div class="menu__item">
+                    <img class="menu__item__icon"
+                         src="https://raw.githubusercontent.com/WendellLiu/alphacamp-frontend-course/master/data-table/static/icons/duplicate.svg"
+                         alt="">
+                    <span>Duplicate</span>
+                  </div>
+                  <div class="menu__item">
+                    <img class="menu__item__icon"
+                         src="https://raw.githubusercontent.com/WendellLiu/alphacamp-frontend-course/master/data-table/static/icons/edit.svg"
+                         alt="">
+                    <span>Edit</span>
+                  </div>
+                  <div class="menu__item">
+                    <img class="menu__item__icon"
+                         src="https://raw.githubusercontent.com/WendellLiu/alphacamp-frontend-course/master/data-table/static/icons/delete.svg"
+                         alt="">
+                    <span>Delete</span>
+                  </div>
+                </div>
+              </div>
             </td>
           </tr>
           <tr class="table__row">
@@ -315,6 +337,7 @@
       </table>
     </div>
   </main>
+  <script src="./main.js"></script>
 </body>
 
 </html>

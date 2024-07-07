@@ -49,6 +49,10 @@ body {
   background-color: #f3f3f3;
 }
 
+.hidden {
+  display: none;
+}
+
 /* style start */
 body {
   display: flex;
@@ -150,4 +154,34 @@ thead th img {
 }
 .table__cell:nth-child(4) > :nth-child(2) {
   color: #828282;
+}
+
+.table__cell--action {
+  position: relative;
+}
+
+.menu__body {
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  position: absolute;
+  right: 50%;
+  top: 100%;
+  background: white;
+}
+
+.menu__item {
+  display: flex;
+  padding: 5px;
+  margin: 0.25rem;
+  align-items: center;
+  justify-content: flex-start;
+  flex: 1;
+  cursor: pointer;
+}
+
+.menu__item__icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 0.5rem;
 }/*# sourceMappingURL=style.css.map */
