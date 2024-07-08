@@ -4,6 +4,7 @@
 # Feature
 - 勾選欄位可反白反白顯示
 - 點擊 Action 按鈕可開啟 popup modal
+- 支援深色模式
 
 # Download
 - Clone this repo to your local computer
