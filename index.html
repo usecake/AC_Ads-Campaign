@@ -10,10 +10,7 @@
 
 <body>
   <nav class="sidebar">
-    <div class="sidebar__logo">
-      <img src="https://raw.githubusercontent.com/WendellLiu/alphacamp-frontend-course/master/data-table/static/icons/logo.svg"
-           alt="logo">
-    </div>
+    <div class="sidebar__logo"></div>
     <div class="sidebar__icons-wrapper">
       <div class="sidebar__icons sidebar__icons--frame sidebar__icons--active">
         <img src="https://raw.githubusercontent.com/WendellLiu/alphacamp-frontend-course/master/data-table/static/icons/frame.svg"
@@ -26,6 +23,10 @@
       <div class="sidebar__icons sidebar__icons--mail">
         <img src="https://raw.githubusercontent.com/WendellLiu/alphacamp-frontend-course/master/data-table/static/icons/mail.svg"
              alt="mail">
+      </div>
+      <div class="sidebar__icons sidebar__icons--darkmode">
+        <label class="sidebar__icons sidebar__icons--darkmode-label" for="darkmode__toggle"></label>
+        <input type="checkbox" class="sidebar__icons--darkmode-input" id="darkmode__toggle"></input>
       </div>
     </div>
   </nav>
@@ -79,7 +80,8 @@
             <td class="table__cell">Start Time</td>
             <td class="table__cell">End Time</td>
             <td class="table__cell table__cell--action">
-              <img class="cell__action__icon" src="https://raw.githubusercontent.com/WendellLiu/alphacamp-frontend-course/master/data-table/static/icons/menu.svg"
+              <img class="cell__action__icon"
+                   src="https://raw.githubusercontent.com/WendellLiu/alphacamp-frontend-course/master/data-table/static/icons/menu.svg"
                    alt="">
               <div class="action__menu hidden" role="dialog" aria-modal="true">
                 <div class="menu__body">
@@ -337,7 +339,6 @@
       </table>
     </div>
   </main>
-  <script src="./main.js"></script>
 </body>
-
+<script src="./main.js"></script>
 </html>

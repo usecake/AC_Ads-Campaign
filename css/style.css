@@ -38,15 +38,50 @@ td {
 
 /*reset end*/
 /* basic setting */
+:root {
+  --main-dark: #03396a;
+  --gray-1: #e4e4e4;
+  --background-grey: #f3f3f3;
+  --main-color: #ff6500;
+  --border-color: #e4e4e4;
+  --zebra-color: #e9e9e9;
+  --header-color: #cdcdcd;
+  --table-grey-text: #828282;
+  --white: white;
+  --background-white: white;
+  --main-text-color: black;
+  --header-text-color: black;
+  --table-background-color: #ffffff;
+  --logo-url: url("https://raw.githubusercontent.com/WendellLiu/alphacamp-frontend-course/master/data-table/static/icons/logo.svg");
+  --darkmode-toggle-url: url("https://raw.githubusercontent.com/WendellLiu/alphacamp-frontend-course/master/data-table/static/icons/darkmode-on.svg");
+}
+
+[data-theme=dark] {
+  --main-dark: #3a3a3a;
+  --grey-1: #e4e4e4;
+  --background-grey: #202020;
+  --main-color: transparent;
+  --border-color: #e4e4e4;
+  --zebra-color: #575757;
+  --header-color: #2e2e2e;
+  --table-grey-text: rgba(255, 255, 255, 37%);
+  --white: white;
+  --main-text-color: white;
+  --header-text-color: #aaaaaa;
+  --table-background-color: #3a3a3a;
+  --logo-url: url("https://raw.githubusercontent.com/ALPHACamp/WFE-data-table/0f97f3113bff18353154b8644eb0b31fff2a3bef/icons/logo-dark.svg");
+  --darkmode-toggle-url: url("https://raw.githubusercontent.com/ALPHACamp/WFE-data-table/0f97f3113bff18353154b8644eb0b31fff2a3bef/icons/darkmode-off.svg");
+}
+
 html {
   font-size: 16px;
   height: 100%;
-  color: black;
+  color: var(--main-text-color);
 }
 
 body {
   height: 100%;
-  background-color: #f3f3f3;
+  background-color: var(--background-grey);
 }
 
 .hidden {
@@ -60,12 +95,13 @@ body {
 
 nav {
   width: 80px;
-  background-color: #03396a;
+  background-color: var(--main-dark);
 }
 
-.sidebar__logo img {
-  width: 100%;
-  padding: 2rem 0;
+.sidebar__logo {
+  background: var(--logo-url);
+  background-size: 100% 100%;
+  padding: 5rem 0;
 }
 
 .sidebar__icons-wrapper {
@@ -84,11 +120,21 @@ nav {
 }
 .sidebar__icons:hover {
   cursor: pointer;
-  background-color: #e4e4e4;
 }
 
 .sidebar__icons--active {
-  background-color: #e4e4e4;
+  background-color: var(--gray-1);
+}
+
+.sidebar__icons--darkmode-label {
+  background: var(--darkmode-toggle-url);
+  background-size: 100% 100%;
+  height: 100%;
+  width: 100%;
+}
+
+.sidebar__icons--darkmode-input {
+  display: none;
 }
 
 .main {
@@ -109,12 +155,12 @@ nav {
 .main__wrapper table {
   width: 100%;
   align-items: center;
-  background: #ffffff;
+  background: var(--table-background-color);
 }
 
 thead tr {
-  background: #cdcdcd;
-  color: black;
+  background: var(--header-color);
+  color: var(--header-text-color);
   position: sticky;
   top: 0;
 }
@@ -130,16 +176,16 @@ thead th img {
 }
 
 .table__row {
-  border-bottom: 1px solid #e4e4e4;
+  border-bottom: 1px solid var(--border-color);
 }
 .table__row:nth-child(even) {
-  background-color: #e9e9e9;
+  background-color: var(--zebra-color);
 }
 .table__row:hover {
-  background: #e4e4e4;
+  background: var(--gray-1);
 }
 .table__row:has(input[type=checkbox]:checked) {
-  background: #ff6500;
+  background: var(--main-color);
 }
 
 .table__cell {
@@ -153,7 +199,7 @@ thead th img {
   cursor: pointer;
 }
 .table__cell:nth-child(4) > :nth-child(2) {
-  color: #828282;
+  color: var(--table-grey-text);
 }
 
 .table__cell--action {
@@ -167,7 +213,7 @@ thead th img {
   position: absolute;
   right: 50%;
   top: 100%;
-  background: white;
+  background: var(--background-white);
 }
 
 .menu__item {
